@@ -1,22 +1,17 @@
 
-/*
-Author: Sky Bouskila
-File Name: styles.css
-Date: November 2026
-*/
-
 /* CSS Reset */
-body, header, nav, main, footer, h1, h2, h3, div, img, ul, li {
+body, header, nav, main, footer, h1, h2, h3, div, img, ul, li, p {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/* Global Style Rules */
+/* Global Styles */
 body {
     background-color: #e4f1f6;
     font-family: Arial, sans-serif;
     color: #092834;
+    line-height: 1.6;
 }
 
 img {
@@ -24,26 +19,23 @@ img {
     display: block;
 }
 
-/* Mobile Viewport Styles */
-
-/* Hide tablet-desktop class */
-.tablet-desk {
-    display: none;
+/* Container */
+#container {
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* Header */
 header {
-    font-family: Arial, sans-serif;
     text-align: center;
     padding: 3%;
     color: #092834;
-    margin-top: 5%;
 }
 
 /* Navigation */
 nav {
     padding: 1%;
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     background-color: #67afcb;
 }
 
@@ -53,22 +45,46 @@ nav ul {
 }
 
 nav li {
-    font-size: 1.2em;
-    padding: 4%;
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 1%;
 }
 
 nav li a {
-    display: block;
     color: #092834;
     text-decoration: none;
 }
 
 /* Main Content */
 main {
-    display: block;
-    margin: 1% 1% 15%;
-    padding: 1%;
+    margin: 2% 1% 5%;
+    padding: 2%;
     font-size: 1em;
+}
+
+main section {
+    margin-bottom: 3%;
+}
+
+main h2 {
+    margin-bottom: 1%;
+}
+
+main h3 {
+    margin-top: 2%;
+}
+
+main p {
+    margin-bottom: 1%;
+}
+
+main a {
+    color: #092834;
+}
+
+/* Other Styles */
+.tablet-desk {
+    display: none;
 }
 
 .corner {
@@ -84,4 +100,5 @@ footer {
     font-size: 0.85em;
     text-align: center;
     margin-top: 2em;
+    padding: 2%;
 }
