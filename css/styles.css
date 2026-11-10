@@ -1,55 +1,59 @@
+
 /*
-Author: 
-File Name: 
-Date: 
+Author: Sky Bouskila
+File Name: styles.css
+Date: November 2026
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul {
+body, header, nav, main, footer, h1, h2, h3, div, img, ul, li {
     margin: 0;
     padding: 0;
     border: 0;
 }
 
-/* Style rule for body and images */
+/* Global Style Rules */
 body {
-	background-color: #e4f1f6;
+    background-color: #e4f1f6;
+    font-family: Arial, sans-serif;
+    color: #092834;
 }
 
 img {
-	max-width: 100%;
-	display: block;
+    max-width: 100%;
+    display: block;
 }
 
-/* Style rules for mobile viewport */
+/* Mobile Viewport Styles */
 
-/* Style rule to hide tablet-desk class */
+/* Hide tablet-desktop class */
 .tablet-desk {
-	display: none;
+    display: none;
 }
 
-/* Style rule for header */
+/* Header */
 header {
-	font-family: Verdana, Arial, sans-serif;
-	text-align: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
     padding: 3%;
     color: #092834;
     margin-top: 5%;
 }
 
-/* Style rules for nav */
+/* Navigation */
 nav {
-	padding: 1%;
+    padding: 1%;
     margin-bottom: 1%;
     background-color: #67afcb;
 }
 
 nav ul {
     text-align: center;
+    list-style-type: none;
 }
 
 nav li {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 4%;
 }
 
@@ -59,25 +63,25 @@ nav li a {
     text-decoration: none;
 }
 
-/* Style rules for main content */
+/* Main Content */
 main {
-	display: block;
-	margin: 1% 1% 15%;
-	padding: 1%;
-    font-size: 1.5em;
+    display: block;
+    margin: 1% 1% 15%;
+    padding: 1%;
+    font-size: 1em;
 }
 
 .corner {
-	border-radius: 12px;
+    border-radius: 12px;
 }
 
 #image {
     margin-bottom: 1%;
 }
 
-/* Style rule for footer */
+/* Footer */
 footer {
-	font-size: .70em;
-	text-align: center;
-	margin-top: 2em;
+    font-size: 0.85em;
+    text-align: center;
+    margin-top: 2em;
 }
