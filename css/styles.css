@@ -1,6 +1,12 @@
 
+/*
+Author: Sky Bouskila
+File Name: styles.css
+Date: November 2026
+*/
+
 /* CSS Reset */
-body, header, nav, main, footer, h1, h2, h3, div, img, ul, li, p {
+body, header, nav, main, footer, h1, h2, h3, div, img, ul, li, p, section {
     margin: 0;
     padding: 0;
     border: 0;
@@ -82,11 +88,20 @@ main a {
     color: #092834;
 }
 
-/* Other Styles */
+/* Home Page Portfolio Cards */
+#container main section div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2%;
+    margin: 1%;
+}
+
+/* Hide Tablet-Desktop Content */
 .tablet-desk {
     display: none;
 }
 
+/* Rounded Corners */
 .corner {
     border-radius: 12px;
 }
@@ -101,4 +116,22 @@ footer {
     text-align: center;
     margin-top: 2em;
     padding: 2%;
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 768px) {
+
+    #container main section:nth-of-type(2) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    nav li {
+        padding: 1.5%;
+    }
+
+    header {
+        padding: 2%;
+    }
 }
