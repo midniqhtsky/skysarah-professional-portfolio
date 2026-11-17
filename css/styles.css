@@ -1,121 +1,283 @@
 
-<!DOCTYPE html>
-<html lang="en">
+/*
+Author: Sky Bouskila
+File Name: styles.css
+Date: November 2026
+*/
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Sky Bouskila featuring skills, experience, and projects.">
-    <title>Sky Bouskila | Professional Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+/* CSS Reset */
+body, header, nav, main, footer, h1, h2, h3, h4,
+div, img, ul, li, p, section, article, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 
-<body>
+/* Global Styles */
+body {
+    background-color: #e4f1f6;
+    font-family: Arial, sans-serif;
+    color: #092834;
+    line-height: 1.6;
+}
 
-    <div id="container">
+img {
+    max-width: 100%;
+    display: block;
+}
 
-        <header>
-            <h1>Sky Bouskila</h1>
-            <h2>Professional Portfolio</h2>
-            <p>Business Analytics | Bookkeeping | Administration | Operations</p>
-        </header>
+/* Container */
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
 
-        <nav aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="skills.html">Skills</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+/* Header */
+header {
+    text-align: center;
+    padding: 3%;
+    color: #092834;
+}
 
-        <main>
+header h1 {
+    font-size: 2em;
+}
 
-            <section>
-                <h2>Welcome to My Portfolio</h2>
+header h2 {
+    font-size: 1.5em;
+}
 
-                <p>
-                    Hello! My name is Sky Bouskila.
-                    Welcome to my professional portfolio,
-                    where you can learn more about my
-                    experience, skills, education, and projects.
-                </p>
+/* Navigation */
+nav {
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: #67afcb;
+}
 
-                <p>
-                    I have a professional background in
-                    accounting, bookkeeping, business operations,
-                    and administrative support.
-                    I am also expanding my technical knowledge
-                    through my studies in web development
-                    and data analysis.
-                </p>
-            </section>
+nav ul {
+    text-align: center;
+    list-style-type: none;
+}
 
-            <section>
-                <h2>Explore My Portfolio</h2>
+nav li {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 1%;
+}
 
-                <div>
-                    <h3>My Projects</h3>
-                    <p>
-                        Explore projects that demonstrate
-                        my technical knowledge, creativity,
-                        and problem-solving abilities.
-                    </p>
-                    <a href="projects.html">View Projects</a>
-                </div>
+nav li a {
+    color: #092834;
+    text-decoration: none;
+}
 
-                <div>
-                    <h3>My Skills</h3>
-                    <p>
-                        Learn more about my experience
-                        in accounting, administration,
-                        data management, and web development.
-                    </p>
-                    <a href="skills.html">View Skills</a>
-                </div>
+nav li a:hover {
+    color: #ffffff;
+}
 
-                <div>
-                    <h3>My Resume</h3>
-                    <p>
-                        Review my professional experience,
-                        education, and qualifications.
-                    </p>
-                    <a href="resume.html">View Resume</a>
-                </div>
+/* Main Content */
+main {
+    margin: 2% 1% 5%;
+    padding: 2%;
+    font-size: 1em;
+}
 
-                <div>
-                    <h3>Contact Me</h3>
-                    <p>
-                        Interested in connecting or learning
-                        more about my professional background?
-                        Feel free to reach out.
-                    </p>
-                    <a href="contact.html">Contact Me</a>
-                </div>
-            </section>
+main section {
+    margin-bottom: 3%;
+}
 
-            <aside>
-                <h2>Professional Highlights</h2>
+main h2 {
+    margin-bottom: 1%;
+}
 
-                <p>
-                    Experienced in QuickBooks, Microsoft Excel,
-                    accounts payable and receivable,
-                    business administration, and customer service.
-                </p>
+main h3 {
+    margin-top: 2%;
+}
 
-                <p>
-                    Fluent in English, Hebrew, and Spanish.
-                </p>
-            </aside>
+main p {
+    margin-bottom: 1%;
+}
 
-        </main>
+main a {
+    color: #092834;
+}
 
-        <footer>
-            <p>&copy; 2026 Sky Bouskila. All Rights Reserved.</p>
-        </footer>
+/* Portfolio Cards */
+#container main section:nth-of-type(2) > div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
 
-    </div>
+/* Hide Tablet-Desktop Content */
+.tablet-desk {
+    display: none;
+}
 
-</body>
-</html>
+/* Rounded Corners */
+.corner {
+    border-radius: 12px;
+}
+
+/* Skills Table Styling */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.skills-table caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #67afcb;
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #67afcb;
+    color: #092834;
+}
+
+/* Alternating Table Row Colors */
+.skills-table tbody tr:nth-of-type(even) {
+    background-color: #d4eaf3;
+}
+
+.skills-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Article Styling */
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+/* Aside Styling */
+aside {
+    background-color: #d4eaf3;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #67afcb;
+    border-radius: 8px;
+}
+
+/* Contact Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #67afcb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    background-color: #67afcb;
+    color: #092834;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #4596b6;
+    color: #ffffff;
+}
+
+/* Multimedia Styling */
+video,
+audio {
+    display: block;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.85em;
+    text-align: center;
+    margin-top: 2em;
+    padding: 2%;
+}
+
+/* Mobile Table Styling */
+@media screen and (max-width: 600px) {
+
+    .skills-table {
+        font-size: 0.85em;
+    }
+
+    .skills-table th,
+    .skills-table td {
+        padding: 6px;
+        overflow-wrap: anywhere;
+    }
+
+    nav li {
+        padding: 2%;
+    }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 768px) {
+
+    #container main section:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #container main section:nth-of-type(2) h2 {
+        width: 100%;
+    }
+
+    #container main section:nth-of-type(2) > div {
+        flex: 1 1 40%;
+    }
+
+    nav li {
+        padding: 1.5%;
+    }
+
+    .tablet-desk {
+        display: block;
+    }
+}
