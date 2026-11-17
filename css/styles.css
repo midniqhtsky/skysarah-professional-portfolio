@@ -1,146 +1,64 @@
 
-/*
-Author: Sky Bouskila
-File Name: styles.css
-Date: November 2026
-*/
-
-/* CSS Reset */
-body, header, nav, main, footer, h1, h2, h3, div, img, ul, li, p, section {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-/* Global Styles */
-body {
-    background-color: #e4f1f6;
-    font-family: Arial, sans-serif;
-    color: #092834;
-    line-height: 1.6;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* Container */
-#container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Header */
-header {
-    text-align: center;
-    padding: 3%;
-    color: #092834;
-}
-
-header h1 {
-    font-size: 2em;
-}
-
-header h2 {
-    font-size: 1.5em;
-}
-
-/* Navigation */
-nav {
-    padding: 1%;
-    margin-bottom: 2%;
-    background-color: #67afcb;
-}
-
-nav ul {
-    text-align: center;
-    list-style-type: none;
-}
-
-nav li {
-    display: inline-block;
-    font-size: 1.1em;
-    padding: 1%;
-}
-
-nav li a {
-    color: #092834;
-    text-decoration: none;
-}
-
-/* Main Content */
-main {
-    margin: 2% 1% 5%;
-    padding: 2%;
-    font-size: 1em;
-}
-
-main section {
-    margin-bottom: 3%;
-}
-
-main h2 {
-    margin-bottom: 1%;
-}
-
-main h3 {
-    margin-top: 2%;
-}
-
-main p {
-    margin-bottom: 1%;
-}
-
-main a {
-    color: #092834;
-}
-
-/* Portfolio Cards */
-#container main section:nth-of-type(2) > div {
+/* Skills Table Styling */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
     background-color: #ffffff;
-    border-radius: 12px;
+}
+
+.skills-table caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #67afcb;
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #67afcb;
+    color: #092834;
+}
+
+/* Alternating Table Row Colors */
+.skills-table tbody tr:nth-of-type(even) {
+    background-color: #d4eaf3;
+}
+
+.skills-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Additional Content Styling */
+article {
+    background-color: #ffffff;
     padding: 20px;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-
-/* Hide Tablet-Desktop Content */
-.tablet-desk {
-    display: none;
-}
-
-/* Rounded Corners */
-.corner {
+    margin: 15px 0;
     border-radius: 12px;
 }
 
-/* Footer */
-footer {
-    font-size: 0.85em;
-    text-align: center;
-    margin-top: 2em;
-    padding: 2%;
+aside {
+    background-color: #d4eaf3;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #67afcb;
+    border-radius: 8px;
 }
 
-/* Desktop Layout */
-@media screen and (min-width: 768px) {
-
-    #container main section:nth-of-type(2) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
+/* Responsive Table */
+@media screen and (max-width: 600px) {
+    .skills-table {
+        font-size: 0.85em;
     }
 
-    #container main section:nth-of-type(2) h2 {
-        width: 100%;
-    }
-
-    #container main section:nth-of-type(2) > div {
-        flex: 1 1 40%;
-    }
-
-    nav li {
-        padding: 1.5%;
+    .skills-table th,
+    .skills-table td {
+        padding: 6px;
+        overflow-wrap: anywhere;
     }
 }
