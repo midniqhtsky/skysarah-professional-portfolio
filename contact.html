@@ -1,48 +1,162 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sky Bouskila for professional opportunities.">
     <title>Sky Bouskila | Contact</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+    <div id="container">
 
-    <header>
-        <h1>Sky Bouskila</h1>
-        <p>Professional Portfolio</p>
-    </header>
+        <header>
+            <h1>Sky Bouskila</h1>
+            <h2>Professional Portfolio</h2>
+            <p>Business Analytics | Bookkeeping | Administration | Operations</p>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <main>
-        <h2>Contact Me</h2>
+        <main>
+            <section>
+                <h2>Contact Me</h2>
 
-        <section>
-            <h3>Email</h3>
-        </section>
+                <p>
+                    Thank you for visiting my professional portfolio!
+                    If you have questions, would like to discuss a
+                    professional opportunity, or simply want to connect,
+                    please complete the form below.
+                </p>
+            </section>
 
-        <section>
-            <h3>Phone</h3>
-        </section>
+            <section>
+                <h2>Send Me a Message</h2>
 
-        <section>
-            <h3>LinkedIn</h3>
-        </section>
-    </main>
+                <form id="contact-form">
 
-    <footer>
-        <p>&copy; 2026 Sky Bouskila. All Rights Reserved.</p>
-    </footer>
+                    <label for="full-name">Full Name:</label>
+                    <input
+                        type="text"
+                        id="full-name"
+                        name="full-name"
+                        placeholder="Enter your full name"
+                        minlength="2"
+                        required>
+
+                    <label for="email">Email Address:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="bousas@mail.broward.edu"
+                        required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter your phone number"
+                        pattern="[0-9+(). -]{7,20}"
+                        title="Enter a valid phone number using 7 to 20 characters.">
+
+                    <label for="reason">Reason for Contact:</label>
+                    <select id="reason" name="reason" required>
+                        <option value="">Please select an option</option>
+                        <option value="Job Opportunity">Job Opportunity</option>
+                        <option value="Business Inquiry">Business Inquiry</option>
+                        <option value="Networking">Networking</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <label for="message">Your Message:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        minlength="10"
+                        placeholder="Write your message here..."
+                        required></textarea>
+
+                    <button type="submit">Submit Message</button>
+                </form>
+
+                <p id="form-note" aria-live="polite">
+                    Submitting the form will open your email application
+                    with your message ready to send.
+                </p>
+            </section>
+
+            <aside>
+                <h2>Connect With Me</h2>
+
+                <p>
+                    You can also connect with me through LinkedIn
+                    to learn more about my professional background.
+                </p>
+
+                <p>
+                    <a href="https://www.linkedin.com/in/sarah-bouskila-78099219b"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Visit My LinkedIn Profile
+                    </a>
+                </p>
+            </aside>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Sky Bouskila. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const contactForm = document.getElementById("contact-form");
+
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!contactForm.reportValidity()) {
+                return;
+            }
+
+            const name = document.getElementById("full-name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const reason = document.getElementById("reason").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent(
+                "Portfolio Contact: " + reason
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Reason: " + reason + "\n\n" +
+                "Message:\n" + message
+            );
+
+            window.location.href =
+                "mailto:bousas@mail.broward.edu?subject=" +
+                subject + "&body=" + body;
+        });
+    </script>
 
 </body>
 </html>
