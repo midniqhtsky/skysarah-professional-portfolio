@@ -14,6 +14,10 @@ div, img, ul, li, p, section, article, aside {
 }
 
 /* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #e4f1f6;
     font-family: Arial, sans-serif;
@@ -82,15 +86,18 @@ main {
 }
 
 main section {
+    display: block;
+    width: 100%;
     margin-bottom: 3%;
 }
 
 main h2 {
-    margin-bottom: 1%;
+    margin-bottom: 15px;
 }
 
 main h3 {
     margin-top: 2%;
+    margin-bottom: 10px;
 }
 
 main p {
@@ -102,12 +109,30 @@ main a {
 }
 
 /* Portfolio Cards */
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0 20px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* Home Page Cards */
 #container main section:nth-of-type(2) > div {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 20px;
     margin: 10px 0;
-    box-sizing: border-box;
+}
+
+/* Resume Lists */
+main section article ul {
+    margin-left: 25px;
+    padding: 10px 0;
+}
+
+main section article li {
+    margin-bottom: 8px;
 }
 
 /* Hide Tablet-Desktop Content */
@@ -155,14 +180,6 @@ main a {
     background-color: #ffffff;
 }
 
-/* Article Styling */
-article {
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 12px;
-}
-
 /* Aside Styling */
 aside {
     background-color: #d4eaf3;
@@ -196,7 +213,6 @@ form textarea {
     margin-top: 5px;
     border: 1px solid #67afcb;
     border-radius: 5px;
-    box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
 
@@ -238,8 +254,29 @@ footer {
     padding: 2%;
 }
 
-/* Mobile Table Styling */
+/* Mobile Layout */
 @media screen and (max-width: 600px) {
+
+    #container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    nav li {
+        padding: 2%;
+        font-size: 0.95em;
+    }
+
+    main {
+        padding: 3%;
+    }
+
+    article {
+        padding: 15px;
+    }
 
     .skills-table {
         font-size: 0.85em;
@@ -251,27 +288,13 @@ footer {
         overflow-wrap: anywhere;
     }
 
-    nav li {
-        padding: 2%;
+    form {
+        padding: 15px;
     }
 }
 
-/* Desktop Layout */
+/* Tablet and Desktop Layout */
 @media screen and (min-width: 768px) {
-
-    #container main section:nth-of-type(2) {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    #container main section:nth-of-type(2) h2 {
-        width: 100%;
-    }
-
-    #container main section:nth-of-type(2) > div {
-        flex: 1 1 40%;
-    }
 
     nav li {
         padding: 1.5%;
@@ -279,5 +302,26 @@ footer {
 
     .tablet-desk {
         display: block;
+    }
+
+    /* Keep articles full width */
+    main section article {
+        display: block;
+        width: 100%;
+    }
+
+    /* Home Page Card Layout */
+    #container main section:nth-of-type(2):has(> div) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #container main section:nth-of-type(2):has(> div) h2 {
+        width: 100%;
+    }
+
+    #container main section:nth-of-type(2) > div {
+        flex: 1 1 40%;
     }
 }
