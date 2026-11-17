@@ -1,3 +1,346 @@
+code?
+Yes! 💙 This is the complete CSS code to restore your blue website design and style your Skills table for Part 4.
+
+Go to GitHub → css → styles.css → pencil icon.
+
+Delete everything in that file and paste this entire code:
+
+
+/*
+Author: Sky Bouskila
+File Name: styles.css
+Date: November 2026
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, h2, h3, h4,
+div, img, ul, li, p, section, article, aside {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Global Styles */
+body {
+    background-color: #e4f1f6;
+    font-family: Arial, sans-serif;
+    color: #092834;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Container */
+#container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 3%;
+    color: #092834;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+header h2 {
+    font-size: 1.5em;
+}
+
+/* Navigation */
+nav {
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: #67afcb;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 1%;
+}
+
+nav li a {
+    color: #092834;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: #ffffff;
+}
+
+/* Main Content */
+main {
+    margin: 2% 1% 5%;
+    padding: 2%;
+    font-size: 1em;
+}
+
+main section {
+    margin-bottom: 3%;
+}
+
+main h2 {
+    margin-bottom: 1%;
+}
+
+main h3 {
+    margin-top: 2%;
+}
+
+main p {
+    margin-bottom: 1%;
+}
+
+main a {
+    color: #092834;
+}
+
+/* Portfolio Cards */
+#container main section:nth-of-type(2) > div {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+/* Hide Tablet-Desktop Content */
+.tablet-desk {
+    display: none;
+}
+
+/* Rounded Corners */
+.corner {
+    border-radius: 12px;
+}
+
+/* Skills Table Styling */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.skills-table caption {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #67afcb;
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #67afcb;
+    color: #092834;
+}
+
+/* Alternating Table Row Colors */
+.skills-table tbody tr:nth-of-type(even) {
+    background-color: #d4eaf3;
+}
+
+.skills-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Article Styling */
+article {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+/* Aside Styling */
+aside {
+    background-color: #d4eaf3;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #67afcb;
+    border-radius: 8px;
+}
+
+/* Contact Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    max-width: 600px;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #67afcb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    background-color: #67afcb;
+    color: #092834;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button:hover {
+    background-color: #4596b6;
+    color: #ffffff;
+}
+
+/* Multimedia Styling */
+video,
+audio {
+    display: block;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+video {
+    width: 100%;
+    max-width: 650px;
+    border-radius: 12px;
+}
+
+/* Footer */
+footer {
+    font-size: 0.85em;
+    text-align: center;
+    margin-top: 2em;
+    padding: 2%;
+}
+
+/* Mobile Table Styling */
+@media screen and (max-width: 600px) {
+
+    .skills-table {
+        font-size: 0.85em;
+    }
+
+    .skills-table th,
+    .skills-table td {
+        padding: 6px;
+        overflow-wrap: anywhere;
+    }
+
+    nav li {
+        padding: 2%;
+    }
+}
+
+/* Desktop Layout */
+@media screen and (min-width: 768px) {
+
+    #container main section:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #container main section:nth-of-type(2) h2 {
+        width: 100%;
+    }
+
+    #container main section:nth-of-type(2) > div {
+        flex: 1 1 40%;
+    }
+
+    nav li {
+        padding: 1.5%;
+    }
+
+    .tablet-desk {
+        display: block;
+    }
+}
+
+After pasting
+Click Commit changes and confirm.
+
+Open index.html and make sure the stylesheet line is exactly:
+
+<link rel="stylesheet" href="css/styles.css">
+
+If you need to correct that line, commit the change.
+
+Wait 1–2 minutes, then refresh your published website with Ctrl + Shift + R.
+
+Your light-blue background, blue navigation bar, and white portfolio cards should return.
+
+Tell me when the blue colors are back, and we'll continue with the Contact page. 💗
+
+User attachment
+Okay, I see it! 💙 Your website is still showing without its blue styling.
+
+We found the CSS file earlier, so now we need to make sure your homepage points to the correct location.
+
+Do this:
+Go to GitHub.
+
+Open index.html (not styles.css).
+
+Click the pencil icon.
+
+Find this line near the top:
+
+<link rel="stylesheet" href="styles.css">
+
+5. Replace only that line with:
+
+<link rel="stylesheet" href="css/styles.css">
+
+Click Commit changes and confirm.
+
+Wait about a minute, then refresh your website using Ctrl + Shift + R.
+
+That's it! Don't replace the whole page again.
+
+Your CSS is inside the css folder, so the link must include css/.
+
+Send me a screenshot after refreshing. 💗
+
+full code
+Got it! 💙 Here's the complete index.html code with your name Sky Bouskila, your portfolio content, and the correct CSS link to restore your blue design.
+
+Go to GitHub → index.html → pencil icon.
+
+Delete the existing code and replace it with everything below.
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,7 +348,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of Sarah Bouskila featuring skills, experience, and projects.">
+    <meta name="description" content="Professional portfolio of Sky Bouskila featuring skills, experience, and projects.">
     <title>Sky Bouskila | Professional Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,6 +360,7 @@
         <header>
             <h1>Sky Bouskila</h1>
             <h2>Professional Portfolio</h2>
+            <p>Business Analytics | Bookkeeping | Administration | Operations</p>
         </header>
 
         <nav aria-label="Main Navigation">
@@ -96,11 +440,13 @@
 
             <aside>
                 <h2>Professional Highlights</h2>
+
                 <p>
                     Experienced in QuickBooks, Microsoft Excel,
                     accounts payable and receivable,
                     business administration, and customer service.
                 </p>
+
                 <p>
                     Fluent in English, Hebrew, and Spanish.
                 </p>
@@ -116,3 +462,23 @@
 
 </body>
 </html>
+
+Now save it
+Click Commit changes.
+
+Confirm the commit.
+
+Wait 1–2 minutes for GitHub Pages to publish.
+
+Open your website and press Ctrl + Shift + R.
+
+Your homepage should display the light-blue background, blue navigation bar, and white portfolio cards once the CSS is loading correctly.
+
+If it's still white, don't replace any more code. We'll check the published stylesheet directly to find the remaining issue.
+
+Tell me whether the blue colors are back. 💙
+
+
+
+
+
