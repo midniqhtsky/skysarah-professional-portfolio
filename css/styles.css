@@ -54,7 +54,7 @@ header {
 
 header h1 {
     font-size: 2.2rem;
-    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.15);
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
 }
 
 header h2 {
@@ -67,10 +67,11 @@ header p {
 
 /* Navigation */
 nav {
-    background: linear-gradient(90deg, #67afcb, #4596b6);
+    background: linear-gradient(90deg, #91d5ed, #267b9e);
     border-radius: 8px;
     margin-bottom: 25px;
     padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 nav ul {
@@ -100,7 +101,7 @@ nav a[aria-current="page"] {
 }
 
 nav a:hover {
-    opacity: 0.85;
+    opacity: 0.75;
 }
 
 /* Main Content */
