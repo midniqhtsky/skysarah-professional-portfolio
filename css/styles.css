@@ -1,21 +1,291 @@
 
-/* Contact Page Layout */
+/*
+Author: Sky Bouskila
+File Name: styles.css
+Date: November 2026
+*/
 
+/* CSS Reset */
+body, header, nav, main, footer,
+h1, h2, h3, h4, div, img, ul, li,
+p, section, article, aside, form {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4f1f6;
+    font-family: Arial, sans-serif;
+    color: #092834;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: #176b8c;
+}
+
+a:hover {
+    color: #4596b6;
+}
+
+/* Main Container */
+#container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    background-color: #67afcb;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    color: #092834;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: #ffffff;
+    color: #092834;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 35px;
+}
+
+main h2 {
+    margin-bottom: 15px;
+}
+
+main h3 {
+    margin-bottom: 10px;
+}
+
+main p {
+    margin-bottom: 15px;
+}
+
+/* Portfolio Images */
+.portfolio-image {
+    width: 100%;
+    max-width: 850px;
+    height: auto;
+    margin: 15px auto 25px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.corner {
+    border-radius: 12px;
+}
+
+/* General Articles */
+article {
+    background-color: #ffffff;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Homepage Portfolio Cards */
+#container main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#container main section:nth-of-type(2) > h2 {
+    grid-column: 1 / -1;
+}
+
+#container main section:nth-of-type(2) > div {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+#container main section:nth-of-type(2) > div a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Professional Interests */
+.interests-section {
+    margin-top: 40px;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.interests-grid article {
+    margin: 0;
+}
+
+.interests-grid img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Projects Page */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.projects-grid article {
+    margin: 0;
+}
+
+.projects-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+/* Resume Page */
+.resume-section {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #67afcb;
+}
+
+.resume-section h2 {
+    color: #176b8c;
+}
+
+.resume-section ul,
+main section article ul {
+    margin-left: 25px;
+    padding: 10px 0;
+}
+
+.resume-section li,
+main section article li {
+    margin-bottom: 8px;
+}
+
+/* Skills Table */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+}
+
+.skills-table caption {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #67afcb;
+    padding: 12px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #67afcb;
+}
+
+.skills-table tbody tr:nth-of-type(even) {
+    background-color: #d4eaf3;
+}
+
+.skills-table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* Aside */
+aside {
+    background-color: #d4eaf3;
+    padding: 25px;
+    margin: 30px 0;
+    border-left: 4px solid #67afcb;
+    border-radius: 8px;
+}
+
+/* Contact Page Layout */
 .contact-layout {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
     align-items: start;
     margin: 30px 0;
 }
 
 /* Contact Information */
-
 .contact-info {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-width: 0;
 }
 
 .contact-info h2 {
@@ -31,46 +301,82 @@
     margin-bottom: 15px;
 }
 
-/* Contact Form Column */
+.contact-info a {
+    overflow-wrap: anywhere;
+}
 
+/* Contact Form Column */
 .contact-form {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    min-width: 0;
 }
 
 .contact-form h2 {
     margin-bottom: 15px;
 }
 
-.contact-form p {
-    margin-bottom: 15px;
+/* Forms */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    max-width: 600px;
 }
-
-/* Form Styling */
 
 .contact-form form {
     width: 100%;
     max-width: none;
     margin: 0;
     padding: 0;
-    box-shadow: none;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
+form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    display: block;
     width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #67afcb;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
     font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    background-color: #67afcb;
+    color: #092834;
+    padding: 12px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 .contact-form button {
     width: 100%;
-    font-weight: bold;
 }
 
-/* Form Note */
+form button:hover {
+    background-color: #4596b6;
+    color: #ffffff;
+}
 
 #form-note {
     font-size: 0.85rem;
@@ -78,17 +384,125 @@
     color: #45616d;
 }
 
-/* Responsive Contact Layout */
+/* Multimedia */
+video,
+audio {
+    display: block;
+    max-width: 100%;
+    margin: 20px 0;
+}
 
+video {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background-color: #092834;
+    border-radius: 12px;
+}
+
+audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Tablet/Desktop Visibility */
+.tablet-desk {
+    display: none;
+}
+
+/* Footer */
+footer {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    border-top: 1px solid #a8d1df;
+}
+
+/* Tablet Layout */
+@media screen and (min-width: 768px) {
+    .tablet-desk {
+        display: block;
+    }
+}
+
+/* Mobile Layout */
 @media screen and (max-width: 767px) {
 
+    #container {
+        width: 95%;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #container main section:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    .interests-grid,
+    .projects-grid,
     .contact-layout {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .contact-info,
     .contact-form {
         padding: 20px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .interests-grid img,
+    .projects-grid img {
+        height: auto;
+    }
+
+    .skills-table {
+        font-size: 0.85rem;
+    }
+
+    .skills-table th,
+    .skills-table td {
+        padding: 7px;
+        overflow-wrap: anywhere;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    video {
+        width: 100%;
     }
 }
