@@ -9,17 +9,146 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Contact Sky Bouskila for professional opportunities.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Sky Bouskila for professional opportunities.">
 
     <title>Sky Bouskila | Contact</title>
 
     <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .contact-page {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 25px 20px;
+        }
+
+        .contact-intro {
+            margin-bottom: 30px;
+        }
+
+        .contact-intro h2 {
+            margin-bottom: 15px;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 30px;
+            align-items: start;
+            margin: 30px 0;
+        }
+
+        .contact-info,
+        .contact-form {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            min-width: 0;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            color: #00334d;
+            margin-bottom: 20px;
+        }
+
+        .contact-info h3 {
+            color: #00334d;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info p {
+            line-height: 1.7;
+            margin-bottom: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-info a {
+            color: #006b96;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            color: #00334d;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #69b2d0;
+            border-radius: 5px;
+            font: inherit;
+            background-color: #ffffff;
+            color: #00334d;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            background-color: #69b2d0;
+            color: #00334d;
+            border: none;
+            padding: 14px;
+            border-radius: 5px;
+            font: inherit;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .contact-form button:hover {
+            background-color: #4a9fbe;
+        }
+
+        #form-note {
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .contact-thanks {
+            background-color: #d5ebf4;
+            padding: 25px;
+            border-left: 4px solid #69b2d0;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 767px) {
+            .contact-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+
     <div id="container">
 
         <header>
@@ -37,14 +166,17 @@
                 <li><a href="projects.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html"
-                       aria-current="page">Contact</a></li>
+                <li>
+                    <a href="contact.html" aria-current="page">
+                        Contact
+                    </a>
+                </li>
             </ul>
         </nav>
 
-        <main>
+        <main class="contact-page">
 
-            <section>
+            <section class="contact-intro">
                 <h2>Let's Connect!</h2>
 
                 <p>
@@ -58,7 +190,6 @@
 
             <div class="contact-layout">
 
-                <!-- Left Column -->
                 <section class="contact-info">
 
                     <h2>Contact Information</h2>
@@ -66,8 +197,7 @@
                     <p>
                         I have professional experience in
                         accounting, bookkeeping, business
-                        operations, and administrative
-                        support.
+                        operations, and administrative support.
                     </p>
 
                     <p>
@@ -87,19 +217,16 @@
                     <h3>LinkedIn</h3>
 
                     <p>
-                        <a
-                          href="https://www.linkedin.com/in/sarah-bouskila-78099219b"
-                          target="_blank"
-                          rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/sarah-bouskila-78099219b"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Visit My LinkedIn Profile
                         </a>
                     </p>
 
                     <h3>Languages</h3>
 
-                    <p>
-                        English, Hebrew, and Spanish
-                    </p>
+                    <p>English, Hebrew, and Spanish</p>
 
                     <h3>Professional Interests</h3>
 
@@ -111,7 +238,6 @@
 
                 </section>
 
-                <!-- Right Column -->
                 <section class="contact-form">
 
                     <h2>Send Me a Message</h2>
@@ -162,35 +288,25 @@
                             Reason for Contact:
                         </label>
 
-                        <select
-                            id="reason"
-                            name="reason"
-                            required>
-
+                        <select id="reason" name="reason" required>
                             <option value="">
                                 Please select an option
                             </option>
-
                             <option value="Job Opportunity">
                                 Job Opportunity
                             </option>
-
                             <option value="Business Inquiry">
                                 Business Inquiry
                             </option>
-
                             <option value="Networking">
                                 Networking
                             </option>
-
                             <option value="General Question">
                                 General Question
                             </option>
-
                             <option value="Other">
                                 Other
                             </option>
-
                         </select>
 
                         <label for="message">
@@ -221,7 +337,7 @@
 
             </div>
 
-            <aside>
+            <aside class="contact-thanks">
                 <h2>Thank You for Visiting!</h2>
 
                 <p>
@@ -243,51 +359,37 @@
     </div>
 
     <script>
-        const contactForm =
-            document.getElementById("contact-form");
+        const contactForm = document.getElementById("contact-form");
 
-        contactForm.addEventListener(
-            "submit",
-            function(event) {
+        contactForm.addEventListener("submit", function(event) {
+            event.preventDefault();
 
-                event.preventDefault();
-
-                if (!contactForm.reportValidity()) {
-                    return;
-                }
-
-                const name =
-                    document.getElementById("full-name").value;
-
-                const email =
-                    document.getElementById("email").value;
-
-                const phone =
-                    document.getElementById("phone").value;
-
-                const reason =
-                    document.getElementById("reason").value;
-
-                const message =
-                    document.getElementById("message").value;
-
-                const subject = encodeURIComponent(
-                    "Portfolio Contact: " + reason
-                );
-
-                const body = encodeURIComponent(
-                    "Name: " + name + "\n" +
-                    "Email: " + email + "\n" +
-                    "Phone: " + phone + "\n" +
-                    "Reason: " + reason + "\n\n" +
-                    "Message:\n" + message
-                );
-
-                window.location.href =
-                    "mailto:bousas@mail.broward.edu?subject=" +
-                    subject + "&body=" + body;
+            if (!contactForm.reportValidity()) {
+                return;
             }
-        );
+
+            const name = document.getElementById("full-name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const reason = document.getElementById("reason").value;
+            const message = document.getElementById("message").value;
+
+            const subject = encodeURIComponent(
+                "Portfolio Contact: " + reason
+            );
+
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Phone: " + phone + "\n" +
+                "Reason: " + reason + "\n\n" +
+                "Message:\n" + message
+            );
+
+            window.location.href =
+                "mailto:bousas@mail.broward.edu?subject=" +
+                subject + "&body=" + body;
+        });
     </script>
 
 </body>
